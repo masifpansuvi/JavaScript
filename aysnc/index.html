@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aysnc JS</title>
+    <style>
+        /* #start{
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        #stop{
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+        } */
+        .project{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body style="background-color: #212121; color: white;">
+    <!-- <div class="project">
+        <div id="insert">
+            <div class="key">Press The key and watch magic</div>
+        </div>
+    </div> -->
+
+
+    <!-- <h1>Start should change the background color every second</h1>
+    <button id="start" >START</button>
+    <button id="stop" >STOP</button> -->
+    <!-- <h1>Aysnc And Await</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button> -->
+    <!-- <h2>Promises</h2> 
+    <h2>callBack Hell</h2> -->
+    <script src="aysnc.js"></script>
+    <!-- <script>
+        //     const ChangehOne = ()=>{
+        //     document.querySelector('h1').innerHTML = 'Chai aur Code'
+        // }
+        // const stopChange =  setTimeout(ChangehOne, 4000)
+        // const btn = document.querySelector('#stop').addEventListener('click',()=>{
+        //     clearTimeout(stopChange)
+        //     console.log('STOPED');
+        // })
+
+        const startBtn = document.querySelector('#start')
+        const stopBtn = document.querySelector('#stop')
+
+        startBtn.addEventListener('click',()=>{
+            const set = setInterval(() => {
+                console.log('Asif', Date.now());
+            }, 1000);
+            stopBtn.addEventListener('click',()=>{
+                clearInterval(set)
+                console.log("STOPED")
+            })
+        })
+        
+
+    </script> -->
+</body>
+</html>

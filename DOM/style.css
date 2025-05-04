@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .para {
+    color: red;
+}
+.newClass {
+    background-color: green;
+}
+
+.heading{
+    color: blue;
+}
+.newHeading {
+    background-color: black;
+}
+.div{
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: greenyellow;
+} */
+
+
+nav {
+    background-color: pink;
+}
+nav ul li{
+    list-style: none;
+    padding: 0 23px;   
+}
+
+nav ul {
+    display: flex;
+}

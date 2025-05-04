@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API's in JS</title>
+    <!-- <style>
+        .container{
+            background-color: rgb(233, 225, 225);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #click{
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            font-size: 18px;
+            border: none;
+        }
+        .img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        .card {
+            display: none;
+        }
+        .cards{
+            height: 200px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 0px 0px 15px;
+            background-color: white;
+            border-radius: 10px;
+            transform: all .3s linear;
+        }
+        .followers{
+            height: 30px;
+            width: 60px;
+            text-align: center;
+            color: white;
+            background-color: black;
+            border-radius: 5px;
+            padding-top: 8px;
+        }
+
+    </style> -->
+</head>
+<body>
+    <p>Let learn promises</p>
+    <!-- <div class="container">
+        <button id="click">Click Here!</button>
+        <div class="card" id="profile">
+            <img src="" class="img">
+            <p class="followers">abc</p>
+
+        </div>
+    </div> -->
+    <!-- <script src="script.js"></script> -->
+    <!-- <script>
+        //Ajax programming
+        // const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+        // const xhr = new XMLHttpRequest();
+        // xhr.open('GET',requestUrl)
+        // xhr.onreadystatechange = function(){
+        //     console.log(xhr.readyState);
+            
+        //     if(xhr.readyState === 4){
+        //             const data = JSON.parse(this.responseText);
+        //             console.log(data.avatar_url)
+        //     }
+        // }
+        // xhr.send()
+        const button = document.getElementById('click')
+        const image = document.querySelector('.img')
+        const followers = document.querySelector('.followers')
+        const profile = document.getElementById('profile')
+        button.addEventListener('click',()=>{
+            button.style.display = 'none'
+            profile.classList.toggle('cards')
+            const xhr = new XMLHttpRequest();
+            const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+            xhr.open('GET',requestUrl,true)
+            xhr.onreadystatechange = function (){
+                if(xhr.readyState === 4){
+                    const data = JSON.parse(this.responseText)
+                    const imageUrl = data.avatar_url
+                    console.log(imageUrl);
+                    image.src = imageUrl
+                    followers.innerHTML = data.followers
+                    
+                       
+                }
+            }
+            xhr.send()
+        })
+        
+    
+        
+    </script> -->
+    
+    
+
+
+</body>
+</html>

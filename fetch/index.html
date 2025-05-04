@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch method</title>
+</head>
+<body>
+    <form id="myForm">
+        Title: <input type="text" id="title"> <br> <br>
+        Body: <input type="text" id="body"> <br> <br>
+        userId: <input type="text" id="userId"> <br> <br>
+        <input type="submit" value="Submit Form" id="btn">
+    </form>
+    <script>
+        // fetch('content.txt')
+        // .then((response) => response.text())
+        // .then((result) => document.write(result));
+        // const table = document.createElement('table')
+        // fetch('https://jsonplaceholder.typicode.com/users')
+        // .then((response) => response.json())
+        // .then((data) => {
+        //     console.log(data)
+            
+        //     for(let x in data){
+        //         const details  = `${data[x].name}  ${data[x].email}  |  ${data[x].address.geo.lat}`
+        //         document.write(details, '<br/>')
+        //     }
+            
+        // });
+       
+        // --> write data on the server or database -- use method: 'post'
+        fetch('https://jsonplaceholder.typicode.com/posts',{
+            method: "post", 
+            body: JSON.stringify({
+                title: 'foo',
+                body: 'boo',
+                userId: 1,
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8'
+            },
+        }).then((response)=>{
+            return response.json();
+        }).then((res)=> console.log(res))
+
+        //--> update the resources --> use method: 'put'
+        // fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        //     method: 'PUT',
+        //     body: JSON.stringify({
+        //         id: 1,
+        //         title: 'foo',
+        //         body: 'boo',
+        //         userId: 1
+        //     }),
+        //     headers: {
+        //         'Content-type': 'application/json'
+        //     },
+        // })
+        // .then((response)=>{
+        //     return response.json();
+        // }).then((result)=> console.log(result));
+
+        //--> delete the data --> use method: "Delete"
+        // fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        //     method: 'delete'
+        // })
+        const btn = document.getElementById('btn')
+        btn.addEventListener('click', function(e){
+            e.preventDefault()
+            let obj = {
+                Title: document.getElementById('title').value,
+                Body: document.getElementById('body').value,
+                userId: document.getElementById('userId').value,
+            }
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'post',
+                body: JSON.stringify(obj),
+               // body: new FormData(document.querySelector('#myForm')), // if we take form data directly
+                headers: {
+                    'Content-type': 'application/json'
+                    // 'Content-type': 'application/x-www-form-urlencoded'
+                }
+            }).then((response)=>{
+                return response.json();
+            }).then((data)=> console.log(data))
+        })
+
+    </script>
+</body>
+</html>

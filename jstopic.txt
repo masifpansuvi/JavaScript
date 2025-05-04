@@ -1,0 +1,14 @@
+1) variable and data type
+2) Control flow
+3) function and scope
+4) Arrays and Object
+5) DOM manipulation
+6) Events and event Handling
+7) Asynchronous javascript
+8) ES6+ features
+9) Error handling
+10) Debugging
+11) Basic Algorithms problem solving
+12) version control with git
+13) Building simple projects
+14) framework
