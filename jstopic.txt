@@ -12,3 +12,9 @@
 12) version control with git
 13) Building simple projects
 14) framework
+
+// to update github
+git status
+git add .
+git commit -m "Your message about the update"
+git push
